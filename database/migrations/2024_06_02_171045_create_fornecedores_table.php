@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('pessoas', function (Blueprint $table) {
+        Schema::create('fornecedores', function (Blueprint $table) {
             $table->id();
-            $table->string('nome',55)->nullable(false);
-            $table->string('cpf',11)->unique()->nullable(false);
-            $table->string('senha',55)->nullable(false);
+            $table->string('razao_social', 60)->nullable(false);
+            $table->string('cnpj', 14)->unique()->nullable(false);
+            $table->string('email', 55)->nullable(false);
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('pessoas');
+        Schema::dropIfExists('fornecedores');
     }
 };
