@@ -35,7 +35,7 @@ Fornecedores Edit
                         </div>
                         <br>  
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary" value="salvar">
+                            <input type="submit" class="btn btn-primary" value="SALVAR">
                         </div>
                         <br>                                                                                      
                     </div>
