@@ -6,5 +6,22 @@ use App\Http\Controllers\FornecedoresController;
 use App\Http\Controllers\ProdutosController;
 
 Route::get('/', [PessoasController::class, 'index']);
-Route::get('/produtos', [ProdutosController::class, 'index']);
-Route::get('/fornecedores', [FornecedoresController::class, 'index']);
+Route::view('/home','home');
+
+Route::prefix('produtos')->group(function () {
+    Route::get('/', [ProdutosController::class, 'index'])->name('produtos.index');
+    Route::get('/create', [ProdutosController::class, 'create'])->name('produtos.create');
+    Route::post('/', [ProdutosController::class, 'store'])->name('produtos.store');
+    Route::get('/{id}/edit', [ProdutosController::class, 'edit'])->where('id', '[0-9]+')->name('produtos.edit');
+    Route::put('/{id}', [ProdutosController::class, 'update'])->where('id', '[0-9]+')->name('produtos.update');
+    Route::delete('/{id}', [ProdutosController::class, 'destroy'])->where('id', '[0-9]+')->name('produtos.destroy');
+});
+
+Route::prefix('fornecedores')->group(function () {
+    Route::get('/', [FornecedoresController::class, 'index'])->name('fornecedores.index');
+    Route::get('/create', [FornecedoresController::class, 'create'])->name('fornecedores.create');
+    Route::post('/', [FornecedoresController::class, 'store'])->name('fornecedores.store');
+    Route::get('/{id}/edit', [FornecedoresController::class, 'edit'])->where('id', '[0-9]+')->name('fornecedores.edit');
+    Route::put('/{id}', [FornecedoresController::class, 'update'])->where('id', '[0-9]+')->name('fornecedores.update');
+    Route::delete('/{id}', [FornecedoresController::class, 'destroy'])->where('id', '[0-9]+')->name('fornecedores.destroy');
+});
