@@ -5,8 +5,12 @@ use App\Http\Controllers\PessoasController;
 use App\Http\Controllers\FornecedoresController;
 use App\Http\Controllers\ProdutosController;
 
-Route::get('/', [PessoasController::class, 'index']);
-Route::view('/home','home');
+Route::get('/', [PessoasController::class, 'index'])->name('index');
+Route::get('/cadastro', [PessoasController::class, 'cadastro'])->name('cadastro');
+Route::post('/', [PessoasController::class, 'salvar'])->name('salvar');
+Route::get('/authenticacao', [PessoasController::class, 'authenticacao'])->name('authenticacao');
+
+Route::view('/home','home')->name('home');
 
 Route::prefix('produtos')->group(function () {
     Route::get('/', [ProdutosController::class, 'index'])->name('produtos.index');

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('pessoas', function (Blueprint $table) {
             $table->id();
             $table->string('nome',55)->nullable(false);
-            $table->string('cpf',11)->unique()->nullable(false);
+            $table->string('cpf',11)->nullable(false);
             $table->string('senha',55)->nullable(false);
             $table->timestamps();
         });
