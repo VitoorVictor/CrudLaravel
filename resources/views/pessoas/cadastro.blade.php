@@ -16,15 +16,15 @@
                             <h3 class="text-center text-primary">Digite seus dados...</h3>
                             <div class="form-group mt-2">
                                 <label for="nome" class="text-primary">Nome:</label><br>
-                                <input type="text" name="nome" id="nome" class="form-control">
+                                <input type="text" name="nome" id="nome" class="form-control" required>
                             </div>
                             <div class="form-group mt-2">   
                                 <label for="cpf" class="text-primary">CPF:</label><br>
-                                <input type="text" name="cpf" id="cpf" class="form-control">
+                                <input type="text" name="cpf" id="cpf" class="form-control" maxlength="11" required>
                             </div>
                             <div class="form-group mt-2 mb-5">
                                 <label for="senha" class="text-primary">Senha:</label><br>
-                                <input type="password" name="senha" id="senha" class="form-control">
+                                <input type="password" name="senha" id="senha" class="form-control" required>
                             </div>
                             <input type="submit" name="logar" class="btn btn-primary btn-md px-5" value="Cadastrar">
                         </form>

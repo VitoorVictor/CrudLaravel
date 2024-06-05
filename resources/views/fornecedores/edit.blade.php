@@ -26,7 +26,7 @@ Fornecedores Edit
                         <br>
                         <div class="form-group">
                             <label for="cnpj" class="form-label">CNPJ:</label>
-                            <input type="text" class="form-control" name="cnpj" required value="{{$fornecedores->cnpj}}">
+                            <input type="text" class="form-control" name="cnpj" maxlength="14" required value="{{$fornecedores->cnpj}}">
                         </div>
                         <br>
                         <div class="form-group">

@@ -25,7 +25,7 @@ Fornecedores Create
                         <br>
                         <div class="form-group">
                         <label for="cnpj" class="form-label">CNPJ:</label>
-                        <input type="text" class="form-control" name="cnpj" id="cnpj" required>
+                        <input type="text" class="form-control" name="cnpj" id="cnpj" maxlength="14" required>
                     </div>
                         <br>
                         <div class="form-group">

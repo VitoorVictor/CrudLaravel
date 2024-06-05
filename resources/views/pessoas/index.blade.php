@@ -16,11 +16,11 @@
                             <h3 class="text-center text-primary">Login</h3>
                             <div class="form-group mt-2">
                                 <label for="cpf" class="text-primary">CPF:</label><br>
-                                <input type="text" name="cpf" id="cpf" class="form-control">
+                                <input type="text" name="cpf" id="cpf" class="form-control" maxlength="11" required>
                             </div>
                             <div class="form-group mt-2">
                                 <label for="senha" class="text-primary">Senha:</label><br>
-                                <input type="password" name="senha" id="senha" class="form-control">
+                                <input type="password" name="senha" id="senha" class="form-control" required>
                             </div>
                             <div class="form-group mt-2 mb-2">
                                 <div class="text-right">

@@ -11,6 +11,7 @@ Route::post('/', [PessoasController::class, 'salvar'])->name('salvar');
 Route::get('/authenticacao', [PessoasController::class, 'authenticacao'])->name('authenticacao');
 
 Route::view('/home','home')->name('home');
+Route::view('/integrantes','integrantes')->name('integrantes');
 
 Route::prefix('produtos')->group(function () {
     Route::get('/', [ProdutosController::class, 'index'])->name('produtos.index');
